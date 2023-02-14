@@ -1,2 +1,3 @@
-export {Button} from './Button/Button.view';
-export {ButtonType} from './Button/buttonType';
+// elements
+export {Button} from './elements/Button/Button.view';
+export {ButtonType} from './elements/Button/buttonType';
