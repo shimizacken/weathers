@@ -1,3 +1,3 @@
 import React from 'react';
 
-export const Dashboard: React.FC = () => <article></article>;
+export const Dashboard: React.FC = () => <article>Dashboard</article>;
