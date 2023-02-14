@@ -6,8 +6,9 @@ import styles from './WeatherCard.module.scss';
 export const WeatherCard: React.FC<{
     locationName: string;
     degrees: string;
-}> = ({locationName, degrees}) => (
-    <Button noDesign>
+    onClick?: () => void;
+}> = ({locationName, degrees, onClick}) => (
+    <Button noDesign onClick={onClick}>
         <div className={styles.weatherCard}>
             <Text size="large">{locationName}</Text>
             <Text size="large">{degrees}</Text>
