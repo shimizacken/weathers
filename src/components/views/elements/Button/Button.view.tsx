@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import cx from 'classnames';
 import {ButtonType} from './buttonType';
 import styles from './Button.module.scss';
 
@@ -21,7 +21,7 @@ export const Button: React.FC<
     ...props
 }) => (
     <button
-        className={classNames(
+        className={cx(
             !noDesign && styles.button,
             {
                 [styles.noDesign]: noDesign,
