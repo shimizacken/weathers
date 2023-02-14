@@ -1,0 +1,17 @@
+.weatherCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8px;
+
+    width: 20vw;
+    height: 10vh;
+
+    border: 1px solid aliceblue;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: ghostwhite;
+    }
+}
