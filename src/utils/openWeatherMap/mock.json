@@ -1,0 +1,40 @@
+{
+	"coord": {
+		"lon": 34.95,
+		"lat": 29.56
+	},
+	"weather": [{
+		"id": 800,
+		"main": "Clear",
+		"description": "clear sky",
+		"icon": "01n"
+	}],
+	"base": "stations",
+	"main": {
+		"temp": 308.66,
+		"pressure": 1012,
+		"humidity": 44,
+		"temp_min": 308.15,
+		"temp_max": 309.15
+	},
+	"visibility": 10000,
+	"wind": {
+		"speed": 5.1,
+		"deg": 350
+	},
+	"clouds": {
+		"all": 0
+	},
+	"dt": 1529604000,
+	"sys": {
+		"type": 1,
+		"id": 7086,
+		"message": 0.4595,
+		"country": "JO",
+		"sunrise": 1529548850,
+		"sunset": 1529599406
+	},
+	"id": 295277,
+	"name": "Eilat",
+	"cod": 200
+}
