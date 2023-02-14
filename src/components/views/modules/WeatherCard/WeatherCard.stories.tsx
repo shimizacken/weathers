@@ -14,3 +14,8 @@ const Template: ComponentStory<typeof WeatherCard> = args => (
 );
 
 export const Primary = Template.bind({});
+
+Primary.args = {
+    locationName: 'Berlin',
+    degrees: '14C°',
+};
