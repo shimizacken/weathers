@@ -1,5 +1,3 @@
-import React from "react";
+import React from 'react';
 
-export const Dashboard: React.FC = () => <div>
-    Dashboard
-</div>;
+export const Dashboard: React.FC = () => <article></article>;
