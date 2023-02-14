@@ -1,13 +1,8 @@
-
 import './App.scss';
-import { Weather } from './components/pages/Weather.page';
+import {MainLayout} from './components/pages/MainLayout.page';
 
 function App() {
-  return (
-    <div className="App">
-      <Weather />
-    </div>
-  );
+    return <MainLayout />;
 }
 
 export default App;
