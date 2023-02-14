@@ -10,7 +10,6 @@ export const Button: React.FC<
         disabled?: boolean;
         onClick?: () => void;
         buttonType?: ButtonType;
-        dataCy?: string;
     }
 > = ({
     text,
@@ -18,14 +17,14 @@ export const Button: React.FC<
     onClick,
     buttonType = ButtonType.BUTTON,
     className,
-    dataCy,
+    ...props
 }) => (
     <button
         className={classNames(styles.button, className)}
         type={buttonType}
         disabled={disabled}
         onClick={onClick}
-        data-cy={dataCy}
+        {...props}
     >
         {text}
     </button>
