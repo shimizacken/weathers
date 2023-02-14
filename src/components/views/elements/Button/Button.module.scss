@@ -4,6 +4,7 @@
   padding: 15px 25px 15px 25px;
   background-color: #f4f4f4;
   cursor: pointer;
+  width: 100%;
 
   &:hover {
     background-color: #f4f4ff;
@@ -19,4 +20,9 @@
     color: #b4b4b4;
     cursor: default;
   }
+}
+
+.noDesign {
+  background-color: transparent;
+  border: none;
 }
