@@ -1,12 +1,12 @@
 import React from 'react';
-import {useMatches} from 'react-router-dom';
+import {useMatch} from 'react-router-dom';
 import {useGetCurrentWeather} from '../../hooks/useGetCurrentWeather';
 import {DetailedWeather} from '../views';
 
 export const DetailedWeatherContainer: React.FC = () => {
-    const matches = useMatches();
+    const matches = useMatch('weather/:locationName');
     const weatherResult = useGetCurrentWeather(
-        matches[0].params.locationName || ''
+        matches?.params.locationName || ''
     );
 
     return <DetailedWeather weather={weatherResult} />;
