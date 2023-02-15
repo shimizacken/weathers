@@ -4,10 +4,12 @@ import {request} from '../utils/common/fetch';
 import {getTimeFromTimestamp, OpenMapToken, Units} from '../utils';
 import {buildFetchWeatherByCityName} from '../utils/openWeatherMap/api';
 
-export const useGetCurrentWeather = (locationName: string) => {
+export const useGetCurrentWeatherByLocationName = (locationName: string) => {
     const [weatherResult, setWeatherResult] = useState<WeatherResult>();
 
     useEffect(() => {
+        let shouldUpdate = true;
+
         const searchByCityNameUrl = buildFetchWeatherByCityName(
             OpenMapToken,
             Units.celsius.value
@@ -32,7 +34,13 @@ export const useGetCurrentWeather = (locationName: string) => {
                 icon: city?.icon,
             };
 
-            setWeatherResult(weatherResult);
+            if (shouldUpdate) {
+                setWeatherResult(weatherResult);
+            }
+
+            return () => {
+                shouldUpdate = false;
+            };
         });
     }, [locationName]);
 
