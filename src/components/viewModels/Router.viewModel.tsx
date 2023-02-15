@@ -8,7 +8,7 @@ export const Router = createBrowserRouter([
         element: <Dashboard />,
     },
     {
-        path: 'weather',
+        path: 'weather/:locationName',
         element: <WeatherDetails />,
     },
 ]);
