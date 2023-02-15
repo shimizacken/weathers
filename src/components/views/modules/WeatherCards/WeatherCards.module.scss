@@ -1,3 +1,14 @@
 .wrapper {
     display: flex;
+    flex-wrap: wrap;
+
+    li {
+        margin: 16px;
+    }
 }
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: min-content;
+    }
+  }
