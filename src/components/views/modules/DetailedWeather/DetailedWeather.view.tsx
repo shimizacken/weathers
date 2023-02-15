@@ -16,24 +16,24 @@ export const DetailedWeather: React.FC<{weather?: WeatherResult}> = ({
                 <div>
                     <AdditionalInfo
                         name="Sunrise"
-                        value={weather?.sunrise + ''}
+                        value={weather?.sunrise ?? ''}
                         className={styles.additionalInfo}
                     />
                     <AdditionalInfo
                         name="Sunset"
-                        value={weather?.sunset + ''}
+                        value={weather?.sunset ?? ''}
                         className={styles.additionalInfo}
                     />
                 </div>
                 <div>
                     <AdditionalInfo
                         name="Humidity"
-                        value={weather?.humidity + '%'}
+                        value={weather?.humidity ?? ''}
                         className={styles.additionalInfo}
                     />
                     <AdditionalInfo
                         name="Visibility"
-                        value={weather?.visibility + 'km'}
+                        value={weather?.visibility ?? ''}
                         className={styles.additionalInfo}
                     />
                 </div>

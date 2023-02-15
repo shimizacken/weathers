@@ -18,15 +18,11 @@ export const Primary = Template.bind({});
 Primary.args = {
     weather: {
         name: 'London',
-        country: '',
-        currentTemperature: 12,
-        minTemperature: 5,
-        maxTemperature: 15,
         displayCurrentTemperature: '12°C',
         displayMinTemperature: '5°C',
         displayMaxTemperature: '15°C',
-        sunrise: 123,
-        sunset: 123,
+        sunrise: '05:20',
+        sunset: '20:30',
         visibility: '10',
         humidity: '30',
         icon: '',
