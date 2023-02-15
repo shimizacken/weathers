@@ -8,3 +8,5 @@ export {Text} from './Foundation/Text/Text.view';
 // modules
 export {DetailedWeather} from './modules/DetailedWeather/DetailedWeather.view';
 export {WeatherCard} from './modules/WeatherCard/WeatherCard.view';
+export {PageContent} from './modules/PageContent/PageContent.view';
+export {WeatherCards} from './modules/WeatherCards/WeatherCards.view';
