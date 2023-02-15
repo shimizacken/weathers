@@ -2,7 +2,7 @@ import {ComponentStory, ComponentMeta} from '@storybook/react';
 import {WeatherCard} from './WeatherCard.view';
 
 export default {
-    title: 'Modules/WeatherCard',
+    title: 'Components/Modules/WeatherCard',
     component: WeatherCard,
     parameters: {
         layout: 'centered',

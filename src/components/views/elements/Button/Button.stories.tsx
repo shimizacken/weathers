@@ -3,7 +3,7 @@ import {Button} from './Button.view';
 import {ButtonType} from './buttonType';
 
 export default {
-    title: 'Views/Button',
+    title: 'Components/Elements/Button',
     component: Button,
     parameters: {
         layout: 'centered',
