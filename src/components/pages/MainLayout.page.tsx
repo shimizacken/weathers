@@ -2,7 +2,7 @@ import React from 'react';
 import {Header, Footer} from '../views';
 import {RouterProvider} from 'react-router-dom';
 import {Router} from '../viewModels/Router.viewModel';
-import {Logo} from '../views/modules/logo/Logo.view';
+import {Logo} from '../views/modules/Logo/Logo.view';
 
 export const MainLayout: React.FC = () => (
     <>
