@@ -21,7 +21,6 @@ export const useGetCurrentWeather = (locationName: string) => {
 
             const weatherResult: WeatherResult = {
                 name: result.name,
-                currentWeather: city?.main,
                 description: city?.description,
                 country: result.sys?.country,
                 currentTemperature: main?.temp,
