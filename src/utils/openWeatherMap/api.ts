@@ -20,7 +20,7 @@ export const buildFetchWeatherBaseURL = (token: string) => (unit: string) => {
     };
 };
 
-export const buildFetchWeatherByCityName = (token: string, unit: string) => {
+export const getBuildWeatherByCityNameUrlFn = (token: string, unit: string) => {
     unit = unit ? `&units=${unit}` : '';
 
     return (cityName: string) =>
