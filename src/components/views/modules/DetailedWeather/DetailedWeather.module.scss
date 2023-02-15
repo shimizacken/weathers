@@ -6,6 +6,12 @@
     width: 600px;
 }
 
+.temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .additionalInfoSection {
     display: flex;
     flex-direction: row;
