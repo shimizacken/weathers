@@ -27,13 +27,13 @@ export const buildFetchWeatherByCityName = (token: string, unit: string) => {
         `${baseUrl}${token}${unit}&q=${encodeURIComponent(cityName)}`;
 };
 
-export const buildFetchWeatherByGeographicCoordinates = (
+export const getFetchWeatherByGeographicCoordinatesFn = (
     token: string,
     unit: string
 ) => {
     unit = unit ? `&units=${unit}` : '';
 
-    return (lat: string, lon: string) =>
+    return (lat: number, lon: number) =>
         `${baseUrl}${token}${unit}&lat=${lat}&lon=${lon}`;
 };
 
