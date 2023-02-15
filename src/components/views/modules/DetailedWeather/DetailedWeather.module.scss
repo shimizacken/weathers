@@ -1,3 +1,16 @@
-.currentTemperature {
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 45vw;
+}
 
+.additionalInfoSection {
+    display: flex;
+    flex-direction: row;
+}
+
+.additionalInfo {
+    margin: 16px
 }
