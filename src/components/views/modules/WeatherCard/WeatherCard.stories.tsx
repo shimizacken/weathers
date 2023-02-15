@@ -17,5 +17,5 @@ export const Primary = Template.bind({});
 
 Primary.args = {
     locationName: 'Berlin',
-    degrees: '14C°',
+    currentTemperature: '14C°',
 };
