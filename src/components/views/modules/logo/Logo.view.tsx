@@ -8,6 +8,7 @@ export const Logo: React.FC<{className?: string}> = ({className}) => (
         className={cx(styles.logo, className)}
         src={sun}
         alt="Site logo"
+        title="Weathers"
         width={150}
     />
 );

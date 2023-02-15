@@ -8,7 +8,7 @@ import {WeatherDetails} from './WeatherDetails.page';
 export const MainLayout: React.FC = () => (
     <>
         <Header
-            start={
+            middle={
                 <Link to="/">
                     <Logo />
                 </Link>
