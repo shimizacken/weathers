@@ -7,8 +7,8 @@ export const WeatherCard: React.FC<{
     currentTemperature: string;
     onClick?: () => void;
 }> = ({locationName, currentTemperature, onClick}) => (
-    <div className={styles.weatherCard}>
+    <li className={styles.weatherCard} onClick={onClick} role="button">
         <Text size="large">{locationName}</Text>
         <Text size="large">{currentTemperature}</Text>
-    </div>
+    </li>
 );
