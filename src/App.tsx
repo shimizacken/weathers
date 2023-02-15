@@ -1,4 +1,3 @@
-import './App.scss';
 import {MainLayout} from './components/pages/MainLayout.page';
 
 function App() {
