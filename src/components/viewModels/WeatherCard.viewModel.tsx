@@ -1,18 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import {useGetCurrentWeather} from '../../hooks/useGetCurrentWeather';
 import {WeatherCard} from '../views/modules/WeatherCard/WeatherCard.view';
 
 export const WeatherCardContainer: React.FC<{locationName: string}> = ({
     locationName,
 }) => {
-    const [weatherResult, setWeatherResult] = useState({});
-
-    useEffect(() => {
-        // 1. get the weather by location name
-        // 2. set the result
-        // setWeatherResult();
-    }, []);
+    const weatherResult = useGetCurrentWeather(locationName);
 
     return (
-        <WeatherCard locationName={locationName} currentTemperature="20C°" />
+        <WeatherCard
+            locationName={locationName}
+            currentTemperature={weatherResult?.displayCurrentTemperature || ''}
+        />
     );
 };

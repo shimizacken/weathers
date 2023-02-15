@@ -1,15 +1,9 @@
 import React from 'react';
-import {WeatherCard} from '../views';
+import {WeatherCardContainer} from '../viewModels/WeatherCard.viewModel';
 
 export const Dashboard: React.FC = () => (
     <article>
-        <WeatherCard locationName="Berlin" currentTemperature="20C°" />
-        <WeatherCard locationName="Berlin" currentTemperature="20C°" />
-        <WeatherCard locationName="Berlin" currentTemperature="20C°" />
-        <WeatherCard locationName="Berlin" currentTemperature="20C°" />
-        <WeatherCard locationName="Berlin" currentTemperature="20C°" />
-        <WeatherCard locationName="Berlin" currentTemperature="20C°" />
-        <WeatherCard locationName="Berlin" currentTemperature="20C°" />
-        <WeatherCard locationName="Berlin" currentTemperature="20C°" />
+        <WeatherCardContainer locationName="Berlin" />
+        <WeatherCardContainer locationName="London" />
     </article>
 );
