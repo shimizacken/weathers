@@ -6,6 +6,12 @@
     width: 600px;
 }
 
+@media screen and (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
+
 .temperature {
     display: flex;
     justify-content: center;
