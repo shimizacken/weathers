@@ -1,38 +1,39 @@
 import React from 'react';
+import type {WeatherResult} from '../../../../types/types';
 import {Text} from '../../Foundation/Text/Text.view';
 import {AdditionalInfo} from '../AdditionalInfo/AdditionalInfo.view';
 import styles from './DetailedWeather.module.scss';
 
-export const DetailedWeather: React.FC<{currentTemperature: string}> = ({
-    currentTemperature,
+export const DetailedWeather: React.FC<{weather?: WeatherResult}> = ({
+    weather,
 }) => {
     return (
         <article className={styles.wrapper}>
             <section>
-                <Text size="huge">{currentTemperature}</Text>
+                <Text size="huge">{weather?.displayCurrentTemperature}</Text>
             </section>
             <section className={styles.additionalInfoSection}>
                 <div>
                     <AdditionalInfo
                         name="Sunrise"
-                        value="05:40"
+                        value={weather?.sunrise + ''}
                         className={styles.additionalInfo}
                     />
                     <AdditionalInfo
                         name="Sunset"
-                        value="20:26"
+                        value={weather?.sunset + ''}
                         className={styles.additionalInfo}
                     />
                 </div>
                 <div>
                     <AdditionalInfo
                         name="Humidity"
-                        value="26%"
+                        value={weather?.humidity + '%'}
                         className={styles.additionalInfo}
                     />
                     <AdditionalInfo
                         name="Visibility"
-                        value="16.2km"
+                        value={weather?.visibility + 'km'}
                         className={styles.additionalInfo}
                     />
                 </div>
