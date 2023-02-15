@@ -15,7 +15,6 @@ const Template: ComponentStory<typeof DetailedWeather> = args => (
 
 export const Primary = Template.bind({});
 
-// Primary.args = {
-//     locationName: 'Berlin',
-//     degrees: '14C°',
-// };
+Primary.args = {
+    currentTemperature: '12°C',
+};
