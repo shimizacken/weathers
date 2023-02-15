@@ -9,7 +9,7 @@ export const WeatherCardContainer: React.FC<{locationName: string}> = ({
     const weatherResult = useGetCurrentWeather(locationName);
 
     return (
-        <NavLink to="weather">
+        <NavLink to={`weather/${locationName.toLocaleLowerCase()}`}>
             <WeatherCard
                 locationName={locationName}
                 currentTemperature={
