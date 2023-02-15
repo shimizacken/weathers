@@ -5,7 +5,7 @@ import {PageContent, WeatherCards} from '../views';
 export const Dashboard: React.FC = () => (
     <PageContent>
         <WeatherCards>
-            <WeatherCardContainer locationName="Oslo" />
+            <WeatherCardContainer locationName="New York" />
             <WeatherCardContainer locationName="Berlin" />
             <WeatherCardContainer locationName="London" />
         </WeatherCards>
