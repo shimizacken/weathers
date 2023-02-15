@@ -1,21 +1,21 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import {useGetCurrentWeather} from '../../hooks/useGetCurrentWeather';
 import {WeatherCard} from '../views/modules/WeatherCard/WeatherCard.view';
 
 export const WeatherCardContainer: React.FC<{locationName: string}> = ({
     locationName,
 }) => {
+    const navigate = useNavigate();
     const weatherResult = useGetCurrentWeather(locationName);
 
     return (
-        <NavLink to={`weather/${locationName.toLocaleLowerCase()}`}>
-            <WeatherCard
-                locationName={locationName}
-                currentTemperature={
-                    weatherResult?.displayCurrentTemperature || ''
-                }
-            />
-        </NavLink>
+        <WeatherCard
+            locationName={locationName}
+            currentTemperature={weatherResult?.displayCurrentTemperature || ''}
+            onClick={() =>
+                navigate(`weather/${locationName.toLocaleLowerCase()}`)
+            }
+        />
     );
 };
