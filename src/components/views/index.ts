@@ -6,4 +6,5 @@ export {Footer} from './elements/Footer/Footer.view';
 export {Text} from './elements/Text/Text.view';
 
 // modules
+export {DetailedWeather} from './modules/DetailedWeather/DetailedWeather.view';
 export {WeatherCard} from './modules/WeatherCard/WeatherCard.view';
