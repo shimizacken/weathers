@@ -6,7 +6,7 @@ import {getFetchWeatherByGeographicCoordinatesFn} from '../../utils/openWeatherM
 import {WeatherCard} from '../views';
 
 const fetchWeatherByGeographicCoordinates =
-    getFetchWeatherByGeographicCoordinatesFn(OpenMapToken, Units.celsius.name);
+    getFetchWeatherByGeographicCoordinatesFn(OpenMapToken, Units.celsius.value);
 
 export const PersonalWeatherCard: React.FC = () => {
     const [url, setUrl] = useState('');
