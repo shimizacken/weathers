@@ -6,6 +6,6 @@ export const WeatherTitle: React.FC<{locationName: string}> = ({
     locationName,
 }) => (
     <div className={styles.wrapper}>
-        <Heading headingTag="h2">Current weather in {locationName}</Heading>
+        <Heading headingTag="h1">Current weather in {locationName}</Heading>
     </div>
 );
