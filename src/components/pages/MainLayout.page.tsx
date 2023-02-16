@@ -1,7 +1,6 @@
 import React from 'react';
-import {Header, Footer} from '../views';
+import {Header, Footer, Logo} from '../views';
 import {Link, Route, Routes} from 'react-router-dom';
-import {Logo} from '../views/modules/Logo/Logo.view';
 import {Dashboard} from './Dashboard.page';
 import {WeatherDetails} from './WeatherDetails.page';
 import {BackButtonContainer} from '../viewModels/BackButton.viewModel';
