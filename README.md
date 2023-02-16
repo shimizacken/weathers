@@ -5,10 +5,6 @@ Weathers is a simple web application for displaying the weather in the current l
 
 It have `Storybook` for developing the stateless component (`Views`) isolatedly.
 
-<div align="center">
-    <img src="src/assets/png/wf-logo.png" />
-</div>
-
 ## Architecture
 Since the app is relatively small, so the the folder structure is flat. The code split into layers such as components, hooks and utils. Components are split into stateless "dumb" components, that focuses on the design called `Views`, while the business logic and internal states are done in `ViewModel` component (`Containers`). Layout is done in the components that called `Page`.
 
