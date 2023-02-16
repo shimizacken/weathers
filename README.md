@@ -1,21 +1,16 @@
 # ⛅️ weathers ☔️
 
 
-Weathers is a simple web application for displaying the weather.
+Weathers is a simple web application for displaying the weather in the current location. It's a `React-TypeScript` app, and uses the [`openweathermap.org`](https://www.openweathermap.org/) api.
 
-It's a `React` based and made usage of
-[`openweathermap.org`](https://www.openweathermap.org/) api.
+It have `Storybook` for developing the stateless component (`Views`) isolatedly.
 
 <div align="center">
     <img src="src/assets/png/wf-logo.png" />
 </div>
 
-## What’s Included?
-
--   [React](http://reactjs.org)
--   [TypeScript](https://www.typescriptlang.org/)
--   [Storybook](https://storybook.js.org)
-
+## Architecture
+Since the app is relatively small, so the the folder structure is flat. The code split into layers such as components, hooks and utils. Components are split into stateless "dumb" components, that focuses on the design called `Views`, while the business logic and internal states are done in `ViewModel` component (`Containers`). Layout is done in the components that called `Page`.
 
 ## Usage
 
@@ -33,10 +28,6 @@ For running `storybook`
 yarn storybook
 ```
 
-### Test
-
--   Unit tests with [`Jest`](https://jestjs.io/)
-
 
 ## Naming conventions
 
@@ -52,8 +43,10 @@ yarn storybook
 | svg                 | dash-separated                | \*.svg  | logo-icon.svg         |
 
 
-## Road map
+## To complete
 
+-   [ ] Back button
+-   [ ] Test coverage
 -   [ ] Translations
 -   [ ] History page
 -   [ ] Forecast
