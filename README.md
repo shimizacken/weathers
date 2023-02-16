@@ -48,6 +48,7 @@ yarn storybook
 -   [ ] Back button
 -   [ ] Test coverage
 -   [ ] Translations
+-   [ ] Deployment + CI/CD
 -   [ ] History page
 -   [ ] Forecast
 -   [ ] Open street map view
