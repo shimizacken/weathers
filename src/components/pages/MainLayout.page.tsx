@@ -4,6 +4,7 @@ import {Link, Route, Routes} from 'react-router-dom';
 import {Dashboard} from './Dashboard.page';
 import {WeatherDetails} from './WeatherDetails.page';
 import {BackButtonContainer} from '../viewModels/BackButton.viewModel';
+import {MetricContainer} from '../viewModels/MetricContainer.viewModel';
 
 export const MainLayout: React.FC = () => (
     <>
@@ -14,6 +15,7 @@ export const MainLayout: React.FC = () => (
                     <Logo />
                 </Link>
             }
+            end={<MetricContainer />}
         />
         <main>
             <Routes>
