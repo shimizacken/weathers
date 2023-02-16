@@ -18,3 +18,6 @@ export const Units = {
 
 export const getUnitNameByValue = (value: string) =>
     Object.values(Units).filter(unit => unit.value === value)?.[0];
+
+export const getSymbolByValue = (value: string) =>
+    Object.values(Units).filter(unit => unit.value === value)?.[0].symbol;
