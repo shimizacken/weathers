@@ -4,10 +4,12 @@ import {Link, Route, Routes} from 'react-router-dom';
 import {Logo} from '../views/modules/Logo/Logo.view';
 import {Dashboard} from './Dashboard.page';
 import {WeatherDetails} from './WeatherDetails.page';
+import {BackButtonContainer} from '../viewModels/BackButton.viewModel';
 
 export const MainLayout: React.FC = () => (
     <>
         <Header
+            start={<BackButtonContainer />}
             middle={
                 <Link to="/">
                     <Logo />
