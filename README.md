@@ -33,10 +33,10 @@ yarn storybook
 
 | type                | filename                      | suffix  | examples              |
 | ------------------- | ----------------------------- | ------- | --------------------- |
-| component           | PascalCase                    | \*.tsx  | MyComponent.tsx       |
-| component folder    | camelCase                     | -       | myComponent           |
+| component           | PascalCase                    | \*.tsx  | MyComponent.[page|viewModel|view].tsx       |
+| component folder    | PascalCase                     | -       | MyComponent           |
 | vanilla JS          | camelCase                     | \*.ts   | userStoreValidator.ts |
-| component test file | camelCase and dot             | \*.ts   | myButton.test.js      |
+| component test file | PascalCase and dot             | \*.ts   | MyButton.test.js      |
 | component's scss    | PascalCase                    | \*.scss | MyControls.module.scss       |
 | partial scss        | low dash prefix and camelCase | \*.scss | \_variables.scss      |
 | image               | dash-separated                | \*.png  | logo-icon.png         |
@@ -49,6 +49,8 @@ yarn storybook
 -   [ ] Test coverage
 -   [ ] Translations
 -   [ ] Deployment + CI/CD
+-   [ ] Support themes
+    -   [ ] Shared common styles variables
 -   [ ] History page
 -   [ ] Forecast
 -   [ ] Open street map view
