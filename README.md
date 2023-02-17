@@ -48,9 +48,10 @@ yarn storybook
 -   [x] Back button
 -   [x] Personalization metrics
 -   [ ] Test coverage
+    -   [x] cypress.io
 -   [ ] Translations
 -   [x] Deployment via netlify
-    -   [ ] Deployment + CI/CD
+    -   [ ] CI/CD
 -   [ ] Support themes
     -   [ ] Shared common styles variables (need to complete)
 -   [ ] History page
