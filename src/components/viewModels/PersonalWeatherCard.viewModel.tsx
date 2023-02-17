@@ -4,7 +4,7 @@ import {useGetCurrentWeatherByUrl} from '../../hooks/useGetCurrentWeather';
 import {unitSignal} from '../../signals/unit.signals';
 import {getGeoLocation, OpenMapToken, Units} from '../../utils';
 import {getFetchWeatherByGeographicCoordinatesFn} from '../../utils/openWeatherMap/api';
-import {WeatherCard} from '../views';
+import {PersonalWeatherCard as PersonalWeatherCardView} from '../views';
 
 const getPersistedUnit = () => {
     let unit = localStorage.getItem('_unit_');
@@ -56,7 +56,7 @@ export const PersonalWeatherCard: React.FC = () => {
     }
 
     return (
-        <WeatherCard
+        <PersonalWeatherCardView
             locationName={weatherResult.name}
             currentTemperature={weatherResult?.displayCurrentTemperature || ''}
             onClick={() =>
