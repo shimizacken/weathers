@@ -10,5 +10,12 @@ export const BackButtonContainer: React.FC = () => {
         return null;
     }
 
-    return <BackButton onClick={() => navigate('/')} />;
+    return (
+        <nav>
+            <BackButton
+                onClick={() => navigate('/')}
+                aria-label="Back to previous page"
+            />
+        </nav>
+    );
 };
