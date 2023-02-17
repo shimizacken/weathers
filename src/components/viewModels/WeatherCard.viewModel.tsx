@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useGetCurrentWeatherByLocationName} from '../../hooks/useGetCurrentWeather';
 import {unitSignal} from '../../signals/unit.signals';
+import {TestId} from '../../testId';
 import {Units} from '../../utils';
 import {WeatherCard} from '../views/modules/WeatherCard/WeatherCard.view';
 
@@ -32,6 +33,7 @@ export const WeatherCardContainer: React.FC<{locationName: string}> = ({
             onClick={() =>
                 navigate(`weather/${locationName.toLocaleLowerCase()}`)
             }
+            data-cy={TestId.WEATHER_CARD}
         />
     );
 };
