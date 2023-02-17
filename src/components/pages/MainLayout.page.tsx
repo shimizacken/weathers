@@ -1,5 +1,5 @@
 import React from 'react';
-import {Header, Footer, Logo} from '../views';
+import {Header, Footer, Logo, LogoWrapper} from '../views';
 import {Link, Route, Routes} from 'react-router-dom';
 import {Dashboard} from './Dashboard.page';
 import {WeatherDetails} from './WeatherDetails.page';
@@ -11,9 +11,11 @@ export const MainLayout: React.FC = () => (
         <Header
             start={<BackButtonContainer />}
             middle={
-                <Link to="/">
-                    <Logo />
-                </Link>
+                <LogoWrapper>
+                    <Link to="/">
+                        <Logo />
+                    </Link>
+                </LogoWrapper>
             }
             end={<MetricContainer />}
         />

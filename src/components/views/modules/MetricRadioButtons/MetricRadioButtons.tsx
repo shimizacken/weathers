@@ -3,6 +3,10 @@ import {Units} from '../../../../utils';
 import {RadioButton} from '../../elements/Radiobutton/RadioButton.view';
 import styles from './MetricRadioButtons.module.scss';
 
+export const MetricRadioButtonsWrapper: React.FC<React.PropsWithChildren> = ({
+    children,
+}) => <div className={styles.mainWrapper}>{children}</div>;
+
 export const MetricRadioButtons: React.FC<{
     radioChanged: (e: React.ChangeEvent<HTMLInputElement>) => void;
     checked: string;

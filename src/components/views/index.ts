@@ -14,4 +14,4 @@ export {WeatherCard} from './modules/WeatherCard/WeatherCard.view';
 export {PersonalWeatherCard} from './modules/WeatherCard/PersonalWeatherCard.view';
 export {PageContent} from './modules/PageContent/PageContent.view';
 export {WeatherCards} from './modules/WeatherCards/WeatherCards.view';
-export {Logo} from './modules/AppLogo/Logo.view';
+export {Logo, LogoWrapper} from './modules/AppLogo/Logo.view';

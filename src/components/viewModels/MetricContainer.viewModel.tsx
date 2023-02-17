@@ -1,7 +1,10 @@
 import React from 'react';
 import {unitSignal} from '../../signals/unit.signals';
 import {getUnitNameByValue, Units} from '../../utils';
-import {MetricRadioButtons} from '../views/modules/MetricRadioButtons/MetricRadioButtons';
+import {
+    MetricRadioButtons,
+    MetricRadioButtonsWrapper,
+} from '../views/modules/MetricRadioButtons/MetricRadioButtons';
 
 export const MetricContainer: React.FC = () => {
     const radioChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -12,9 +15,11 @@ export const MetricContainer: React.FC = () => {
     };
 
     return (
-        <MetricRadioButtons
-            radioChanged={radioChanged}
-            checked={localStorage.getItem('_unit_') ?? Units.celsius.value}
-        />
+        <MetricRadioButtonsWrapper>
+            <MetricRadioButtons
+                radioChanged={radioChanged}
+                checked={localStorage.getItem('_unit_') ?? Units.celsius.value}
+            />
+        </MetricRadioButtonsWrapper>
     );
 };
