@@ -1,5 +1,6 @@
 import React from 'react';
 import {useNavigate, useMatch} from 'react-router-dom';
+import {TestId} from '../../testId';
 import {BackButton} from '../views/elements/Button/BackButton.view';
 
 export const BackButtonContainer: React.FC = () => {
@@ -16,6 +17,7 @@ export const BackButtonContainer: React.FC = () => {
                 onClick={() => navigate('/')}
                 aria-label="Back to previous page"
                 title="Back to previous page"
+                data-cy={TestId.BACK_BUTTON}
             />
         </nav>
     );
