@@ -45,17 +45,18 @@ yarn storybook
 
 ## To complete
 
--   [ ] Back button
+-   [x] Back button
+-   [x] Personalization metrics
 -   [ ] Test coverage
 -   [ ] Translations
--   [ ] Deployment + CI/CD
+-   [x] Deployment via netlify
+    -   [ ] Deployment + CI/CD
 -   [ ] Support themes
-    -   [ ] Shared common styles variables
+    -   [ ] Shared common styles variables (need to complete)
 -   [ ] History page
 -   [ ] Forecast
 -   [ ] Open street map view
 -   [ ] Graphs
--   [ ] Personalization
 
 ### License
 
