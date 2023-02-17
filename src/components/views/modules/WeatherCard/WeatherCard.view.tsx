@@ -8,11 +8,12 @@ export const WeatherCard: React.FC<{
     locationName: string;
     currentTemperature: string;
     onClick?: () => void;
-}> = ({className, locationName, currentTemperature, onClick}) => (
+}> = ({className, locationName, currentTemperature, onClick, ...props}) => (
     <li
         className={cx(styles.weatherCard, className)}
         onClick={onClick}
         role="button"
+        {...props}
     >
         <Text size="large">{locationName}</Text>
         <Text size="large">{currentTemperature}</Text>
