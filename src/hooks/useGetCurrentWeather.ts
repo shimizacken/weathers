@@ -3,11 +3,21 @@ import type {WeatherResult} from '../types/types';
 import {request} from '../utils/common/fetch';
 import {getTimeFromTimestamp, OpenMapToken, Units} from '../utils';
 import {getBuildWeatherByCityNameUrlFn} from '../utils/openWeatherMap/api';
+import {getSymbolByValue} from '../utils';
 
-const buildWeatherByCityNameUrl = getBuildWeatherByCityNameUrlFn(
-    OpenMapToken,
-    Units.celsius.value
-);
+const getPersistedUnit = () => {
+    let unit = localStorage.getItem('_unit_');
+
+    if (!unit) {
+        return Units.celsius.value;
+    }
+
+    return unit;
+};
+
+const buildWeatherByCityNameUrl = getBuildWeatherByCityNameUrlFn(OpenMapToken);
+
+const symbol = getSymbolByValue(getPersistedUnit());
 
 export const buildWeather = (result: any) => {
     const {main} = result;
@@ -16,9 +26,9 @@ export const buildWeather = (result: any) => {
     const weatherResult: WeatherResult = {
         name: result.name,
         description: city?.description,
-        displayCurrentTemperature: `${main?.temp}${Units.celsius.symbol}`,
-        displayMinTemperature: `${main?.temp_min}${Units.celsius.symbol}`,
-        displayMaxTemperature: `${main?.temp_max}${Units.celsius.symbol}`,
+        displayCurrentTemperature: `${main?.temp}${symbol}`,
+        displayMinTemperature: `${main?.temp_min}${symbol}`,
+        displayMaxTemperature: `${main?.temp_max}${symbol}`,
         humidity: `${main?.humidity}%`,
         visibility: `${result.visibility}km`,
         sunrise: getTimeFromTimestamp(result.sys?.sunrise),
@@ -29,11 +39,11 @@ export const buildWeather = (result: any) => {
     return weatherResult;
 };
 
-export const useGetCurrentWeatherByUrl = (url: string) => {
+export const useGetCurrentWeatherByUrl = (url: string, unit: string) => {
     const [weatherResult, setWeatherResult] = useState<WeatherResult>();
 
     useEffect(() => {
-        if (!url) {
+        if (!url || !unit) {
             return;
         }
 
@@ -50,18 +60,21 @@ export const useGetCurrentWeatherByUrl = (url: string) => {
                 shouldUpdate = false;
             };
         });
-    }, [url]);
+    }, [url, unit]);
 
     return weatherResult;
 };
 
-export const useGetCurrentWeatherByLocationName = (locationName: string) => {
+export const useGetCurrentWeatherByLocationName = (
+    locationName: string,
+    unit: string
+) => {
     const [weatherResult, setWeatherResult] = useState<WeatherResult>();
 
     useEffect(() => {
         let shouldUpdate = true;
 
-        const url = buildWeatherByCityNameUrl(locationName);
+        const url = buildWeatherByCityNameUrl(unit, locationName);
 
         request(url).then(result => {
             const weatherResult = buildWeather(result);
@@ -74,7 +87,7 @@ export const useGetCurrentWeatherByLocationName = (locationName: string) => {
                 shouldUpdate = false;
             };
         });
-    }, [locationName]);
+    }, [locationName, unit]);
 
     return weatherResult;
 };
