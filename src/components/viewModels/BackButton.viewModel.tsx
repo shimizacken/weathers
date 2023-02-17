@@ -1,6 +1,6 @@
 import React from 'react';
 import {useNavigate, useMatch} from 'react-router-dom';
-import {Button} from '../views/elements/Button/Button.view';
+import {BackButton} from '../views/elements/Button/BackButton.view';
 
 export const BackButtonContainer: React.FC = () => {
     const match = useMatch('weather/:locationName');
@@ -10,9 +10,5 @@ export const BackButtonContainer: React.FC = () => {
         return null;
     }
 
-    return (
-        <Button onClick={() => navigate('/')} noDesign>
-            ⬅
-        </Button>
-    );
+    return <BackButton onClick={() => navigate('/')} />;
 };
