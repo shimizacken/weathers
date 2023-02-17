@@ -20,21 +20,20 @@ export const buildFetchWeatherBaseURL = (token: string) => (unit: string) => {
     };
 };
 
-export const getBuildWeatherByCityNameUrlFn = (token: string, unit: string) => {
-    unit = unit ? `&units=${unit}` : '';
+export const getBuildWeatherByCityNameUrlFn = (token: string) => {
+    return (unit: string, cityName: string) => {
+        unit = unit ? `&units=${unit}` : '';
 
-    return (cityName: string) =>
-        `${baseUrl}${token}${unit}&q=${encodeURIComponent(cityName)}`;
+        return `${baseUrl}${token}${unit}&q=${encodeURIComponent(cityName)}`;
+    };
 };
 
-export const getFetchWeatherByGeographicCoordinatesFn = (
-    token: string,
-    unit: string
-) => {
-    unit = unit ? `&units=${unit}` : '';
+export const getFetchWeatherByGeographicCoordinatesFn = (token: string) => {
+    return (unit: string, lat: number, lon: number) => {
+        unit = unit ? `&units=${unit}` : '';
 
-    return (lat: number, lon: number) =>
-        `${baseUrl}${token}${unit}&lat=${lat}&lon=${lon}`;
+        return `${baseUrl}${token}${unit}&lat=${lat}&lon=${lon}`;
+    };
 };
 
 export const buildIconUrl = (icon: string) =>

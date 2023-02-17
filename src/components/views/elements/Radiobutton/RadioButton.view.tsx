@@ -1,13 +1,14 @@
 import React from 'react';
 import cx from 'classnames';
 import styles from './RadioButton.module.scss';
+import {Text} from '../../Foundation/Text/Text.view';
 
 export const RadioButton: React.FC<{
     text?: string;
     name?: string;
     checked?: boolean;
     className?: string;
-    onChange: () => void;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     value?: string;
     disabled: boolean;
 }> = ({
@@ -23,7 +24,7 @@ export const RadioButton: React.FC<{
     <label
         className={cx(styles.container, disabled && styles.disabled, className)}
     >
-        <span>{text}</span>
+        <Text size="small">{text}</Text>
         <input
             type="radio"
             defaultChecked={checked}

@@ -7,7 +7,7 @@ export const Header: React.FC<{
     end?: React.ReactNode;
 }> = ({start, middle, end}) => (
     <header className={styles.header}>
-        <section>{start}</section>
+        <section className={styles.section}>{start}</section>
         <section>{middle}</section>
         <section>{end}</section>
     </header>
