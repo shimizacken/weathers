@@ -11,6 +11,7 @@ export {Footer} from './elements/Footer/Footer.view';
 // modules
 export {DetailedWeather} from './modules/DetailedWeather/DetailedWeather.view';
 export {WeatherCard} from './modules/WeatherCard/WeatherCard.view';
+export {PersonalWeatherCard} from './modules/WeatherCard/PersonalWeatherCard.view';
 export {PageContent} from './modules/PageContent/PageContent.view';
 export {WeatherCards} from './modules/WeatherCards/WeatherCards.view';
 export {Logo} from './modules/AppLogo/Logo.view';
