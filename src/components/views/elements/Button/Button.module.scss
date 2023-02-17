@@ -1,23 +1,25 @@
+@import "../../../../styles/colors";
+
 .button {
   border: none;
   border-radius: 10px;
   padding: 15px 25px 15px 25px;
-  background-color: #f4f4f4;
+  background-color: $button-background;
   cursor: pointer;
   width: 100%;
 
   &:hover {
-    background-color: #f4f4ff;
+    background-color: $button-background-hover;
   }
 
   &:active {
-    background-color: #f4f4ff;
+    background-color: $button-background-hover;
   }
 
   &:disabled {
-    background-color: #ffffff;
-    border: 1px solid #dcdcdc;
-    color: #b4b4b4;
+    background-color: $button-background-disabled;
+    border: 1px solid $button-border-disabled;
+    color: $button-color-disabled;
     cursor: default;
   }
 }
@@ -30,5 +32,5 @@
 
 .backButton {
   font-size: 26px;
-  color: #48484A;
+  color: $back-button-color;
 }
