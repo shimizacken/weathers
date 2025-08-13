@@ -4,6 +4,10 @@ Weathers is a simple web application for displaying the weather in the current l
 
 It have `Storybook` for developing the stateless component (`Views`) isolatedly.
 
+<div align="center">
+    <img src="https://github.com/shimizacken/weather-fetcher/blob/master/src/assets/png/wf-logo.png" width="200" />
+</div>
+
 ## Demo
 
 <a href="https://my-weathers.netlify.app" target="_blank">https://my-weathers.netlify.app</a>
